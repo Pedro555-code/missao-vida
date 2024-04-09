@@ -1,0 +1,282 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #fffefe;
+}
+
+body, html {
+    height: 100%;
+}
+
+.header {
+    width: 100%;
+    height: 100px;
+    background-color: #018a5a;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+
+.logo img {
+    height: 75px;
+}
+
+.title {
+    justify-content: center;
+    flex: 2;
+    font-size: 15px;
+}
+
+.content {
+    width: 100%;
+    height: 100%;
+    background-image: url(../images/Background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.table {
+    width: 1000px;
+    height: 600px;
+    margin-top: 50px;
+    background-color: #fffefe;
+    box-shadow: 0 0 4px #000;
+    border-radius: 20px;
+    color: #000;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    overflow-y: auto;
+}
+
+.table-teste {
+    width: 90%;
+    height: 100px;
+    box-shadow: 0 0 4px #000;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.table-header {
+    width: 90%;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 5px;
+    border-bottom: 1px solid #D3D3D3;
+    margin-bottom: 30px;
+}
+
+.table-header h2 {
+    font-size: 20px;
+}
+
+.cadastrar {
+    width: 90%;
+    height: 100px;
+    box-shadow: 0 0 4px #000;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    background-color: #F5F5F5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    min-height: 100px;
+}
+
+.cadastrar img {
+    height: 80px;
+}
+
+.perfil {
+    width: 90%;
+    height: 100px;
+    box-shadow: 0 0 4px #000;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.perfil img {
+    height: 100px;
+    border-radius: 10px;
+}
+
+.perfil {
+    display: flex;
+    flex-direction: row;
+}
+
+.infos {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.infos table {
+    width: 100%;
+    height: 90%;
+    text-align: center;
+}
+
+.functions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+}
+
+.functions img {
+    width: 30px;
+    height: 30px;
+}
+
+.excluir, .editar {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.excluir button, .editar button {
+    padding: 5px;
+    cursor: pointer;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.excluir button {
+    background-color: red;
+    color: #fffefe;
+    font-weight: bold;
+    border: none;
+    border-radius: 3px;
+}
+
+.editar button {
+    color: #000;
+    font-weight: bold;
+    border: none;
+    border-radius: 3px;
+}
+
+.excluir img, .editar img {
+    margin-top: 5px;
+}
+
+.footer {
+    width: 100%;
+    height: 30px;
+    background-color: #018a5a;
+    position:fixed;
+    bottom: 0;
+}
+
+.footer p {
+    line-height: 30px;
+    padding-left: 20px;
+    font-size: 15px;
+}
+
+.modal-container {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    z-index: 999;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal {
+    width: 500px;
+    height: 300px;
+    background-color: #fffefe;
+    box-shadow: 0 0 4px #000;
+    border-radius: 20px;
+    color: #000;
+    position: absolute;
+    top: 350px;
+    left: 700px;
+    display: flex;
+}
+
+.modal form {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.modal form label {
+    font-size: 20px;
+    margin-top: 5px;
+}
+
+.modal form input {
+    padding: 2px;
+    font-size: 20px;
+}
+
+.modal form button {
+    margin-top: 15px;
+    background-color: green;
+    color: #fffefe;
+    font-weight: bold;
+    border: none;
+    border-radius: 3px;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.active {
+    display: flex;
+}
+
+.active .modal {
+    animation: modal .4s;
+}
+
+@keyframes modal {
+    from {
+        opacity: 0;
+        transform: translate3d(0, -60px, 0);
+    }
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
